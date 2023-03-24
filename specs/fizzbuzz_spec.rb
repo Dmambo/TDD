@@ -1,7 +1,7 @@
 # write only unit tests for method fizzbuzz in class Solver
 
 require 'rspec'
-require './solver'
+require '../solver'
 
 describe Solver do
   describe '#fizzbuzz' do
@@ -12,13 +12,13 @@ describe Solver do
     end
 
     context 'when number is divisible by 5' do
-      it 'returns Buzz' do
+      it 'returns buzz' do
         expect(Solver.fizzbuzz(5)).to eq('buzz')
       end
     end
 
     context 'when number is divisible by 3 and 5' do
-      it 'returns FizzBuzz' do
+      it 'returns fizzbuzz' do
         expect(Solver.fizzbuzz(15)).to eq('fizzbuzz')
       end
     end

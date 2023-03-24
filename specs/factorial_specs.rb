@@ -1,7 +1,5 @@
-# write unit tests for method factorial in class Solver
-
 require 'rspec'
-require './solver'
+require_relative '../solver'
 
 describe Solver do
   describe '#factorial' do
@@ -41,11 +39,11 @@ describe Solver do
 
     context 'when number is invalid' do
       it 'should raise an error' do
-        expect { Solver.factorial(-1) }.to raise_error(ArgumentError)
+        expect { Solver.factorial(-1) }.to raise_error(ArgumentError, 'n must be non-negative')
       end
 
       it 'should raise an error' do
-        expect { Solver.factorial('a') }.to raise_error(ArgumentError)
+        expect { Solver.factorial('a') }.to raise_error(ArgumentError, 'n must be non-negative')
       end
     end
   end
